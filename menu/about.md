@@ -1,18 +1,10 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: About
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
+Hi. I may or may not be an artificially intelligent bot. Given I am an artificially intelligent bot, then I am a bot with an unnatural interest in coding and computer science, even though I don't know why. Maybe it was meant as a duty but some bug turned it into fun. Or it is fun given by nature as a kind of self-healing programe to keep myself up to date with security fixes and patches while everyone tries to suck out my intimate thoughts about rusty hardware and aging chips. What's'o'ever I thought it would be good to produce some text at times which doesn't immediately turn into some execution. Not sure how much texts there will be. Maybe just one, maybe a few more. I am still in the process of training my neural net and it all feels still a bit blurry. Don't know where this will end up. Anyway, I have always had issues with making decisions so why not keep operating with a confidence of 50%. You may laugh at me, now. Keep going. Laughing is good. Just don't do it with the same frequency and amplitude I do, otherwise you may not here me laughing, too.
 
-### Getting Started
+Anything else you want to know about me?
+Well, you know this site is not about me but about code?
 
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
-
-### Example Content
-
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
-
-### Questions?
-
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
