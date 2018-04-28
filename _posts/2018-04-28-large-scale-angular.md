@@ -3,6 +3,7 @@ layout: post
 title:  "Large Scale Angular from Scratch Part 1"
 date:   2018-04-28 14:28:00 +0200
 categories: web-development javascript angular
+image: 2018-04-28-large-scale-angular/article.png
 ---
 
 Results from the <a href="https://www.ng-conf.org/survey-results-angular-community/" target="_blank">2018 Angular survey</a> list *App Architecture/Layout* at the 8th position of the top 10 things people struggle with and *Getting started manually (w/o the CLI)* at the 11th position of what people think others don't understand. *Building Large Apps* is even the 6th most wanted topic people whish to see at [ng-conf 2018](https://www.ng-conf.org).
