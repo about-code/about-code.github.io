@@ -5,7 +5,7 @@ date:   2018-04-28 14:28:00 +0200
 categories: web-development javascript angular
 ---
 
-Results from the <a href="https://www.ng-conf.org/survey-results-angular-community/" target="_blank">2018 Angular survey</a> list *App Architecture/Layout* at the 8th position of the top 10 things people struggle with and *Getting started manually (w/o the CLI)* at the 11th position of what people think others don't understand. *Building Large Apps* is even the 6th most wanted topic people whish to see at [ng-conf 2018](ng-conf.org).
+Results from the <a href="https://www.ng-conf.org/survey-results-angular-community/" target="_blank">2018 Angular survey</a> list *App Architecture/Layout* at the 8th position of the top 10 things people struggle with and *Getting started manually (w/o the CLI)* at the 11th position of what people think others don't understand. *Building Large Apps* is even the 6th most wanted topic people whish to see at [ng-conf 2018](https://www.ng-conf.org).
 
 The reasons why there's considerable interest in these topics might be because there aren't many angular docs or articles out there focusing on requirements of large-scale enterprise app development. Things are likely to improve with Angular CLI v6 which comes with [library support](https://github.com/angular/angular-cli/issues/6510) but it took a long road to get there. Nevertheless, even with library support the CLI may still not be able to provide the flexibility required sometimes in enterprise settings. Thankfully, the CLI developers provide us with great [`@ngtools/webpack`](https://npmjs.com/package/@ngtools/webpack) which allows us to compile an Angular application within a custom project setting and with a custom webpack build.
 
@@ -108,22 +108,22 @@ Open `package.json` and add `"private": true,` as the first line following the o
 
 Finding out what dependencies and tools it takes to build a production-ready Angular app from scratch became a bit of a research task. IMHO Angular docs were better at that in the past but have started to refer to *angular-cli* or the [angular quickstart](https://github.com/angular/quickstart) seed project. The seed project is a little outdated. So when building an angular project from scratch its probably better to generate a temporary project with the cli and look at the `dependencies` section of the generated `package.json`.
 
-For the sake of this tutorial copy the `dependencies` and `devDependencies` section from our [sample project](https://github.com/about-code/ng-mono-sample) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_and_bundling) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
+For the sake of this tutorial copy the `dependencies` and `devDependencies` section from our [sample project](https://github.com/about-code/ng-mono-sample) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_the_app) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
 
-- **TypeScript** for writing and transpiling typed JavaScript
-- **Webpack** for building and bundling our app
-- **Karma** for running unit tests, instrumenting sources and code-coverage reports
-- **Jasmine** the testing API for writing unit tests
-- **Protractor** for browser automation and ui testing
-- **ng-packagr** for building sharable libraries from our *packages*
-- **Lerna** for handling a package release process
+- **[TypeScript](https://www.typescriptlang.org)** for writing and transpiling typed JavaScript
+- **[Webpack](https://www.webpack.js.org)** for building and bundling our app
+- **[Karma](https://karma-runner.github.io)** for running unit tests, instrumenting sources and code-coverage reports
+- **[Jasmine](https://jasmine.github.io)** the testing API for writing unit tests
+- **[Protractor](https://www.protractortest.org/)** for browser automation and ui testing
+- **[ng-packagr](https://www.github.com/dherges/ng-packagr/)** for building sharable libraries from our *packages*
+- **[Lerna](https://lernajs.io)** for handling a package release process
 
 Our actual application dependencies are common to every Angular project:
 
-- **Angular Packages** (`@angular/*`)
-- **RxJS** (Reactive Extensions)
-- **Zone.js**
-- **Core-JS** (Polyfills)
+- **[Angular Packages](https://angular.io)** (`@angular/*`)
+- **[RxJS](https://github.com/reactivex/rxjs)** (Reactive Extensions)
+- **[Zone.js](https://github.com/angular/zone.js)**
+- **[Core-JS](https://github.com/zloirock/core-js)** (Polyfills)
 
 > **Npm fundamentals:** Additional development tools should be added/installed with `npm i -D <package-name>`. Packages listet in `dependencies` contribute source code which is going to be bundled and deployed with our application. These deps should be added with `npm i <package-name>`.
 
