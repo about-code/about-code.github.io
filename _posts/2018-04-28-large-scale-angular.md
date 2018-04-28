@@ -91,6 +91,9 @@ npm init
 touch README.md LICENSE.txt
 mkdir config packages scripts src
 ```
+
+> A note for Windows users: we are using the Unix commands `touch` for creating new empty files and `mkdir -p <path>` to create missing folders along a path specification. You may have to use the equivalent Windows Explorer operations to create files and directories.
+
 Now you should have a project folder which looks similar to this one:
 
 ```
