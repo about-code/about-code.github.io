@@ -19,7 +19,7 @@ Throughout this article we are going to copy parts of a [sample project](https:/
 - [Architectural Considerations](#architectural_considerations)
 - [Setting up the Project Package](#set_up_project)
 - [Installing Project Dependencies and Defining the Toolchain](#install_deps)
-- [Setting up Git](#set_up_git)
+- [Setting up a Local Git Repository](#set_up_git)
 - [Setting up TypeScript](#set_up_typescript)
 - [Writing the App](#writing_the_app)
   - Packages
@@ -150,7 +150,7 @@ ${PROJECT_HOME}
 > **Hint:**  If you're interested in what all the deps do head over to https://npmjs.com or have a look into the `node_modules` folder. Most packages come with a README.md by convention.
 
 
-## Setting up Git<a name="set_up_git"></a>
+## Setting up a Local Git Repository<a name="set_up_git"></a>
 
 We assume you have [Git](https://www.git-scm.com) installed. Let's create a local Git repository:
 
@@ -211,7 +211,7 @@ By default the TypeScript module resolution will look for package imports like `
 
 #### `angularCompilerOptions`
 
-The Angular compiler is a wrapper around TypeScript which is capable of statically analysing and transforming Angular specific artifacts and code concepts, like decorator meta data or HTML templates. A `tsconfig.json` for an Angular application project needs an `angulerCompilerOptions` section instructing the Angular Ahead-of-Time compiler. If you've copied the config from our [sample project](https://github.com/about-code/ng-mono-sample) it should look like this:
+The Angular compiler is a wrapper around TypeScript which is capable of statically analysing and transforming Angular specific artifacts and code concepts, like decorator meta data or HTML templates. A `tsconfig.json` for an Angular application project needs additional `angularCompilerOptions` for instructing the Angular Ahead-of-Time compiler. If you copied the config from our [sample project](https://github.com/about-code/ng-mono-sample) it should look like this:
 
 ```
 "angularCompilerOptions": {
