@@ -11,7 +11,7 @@ The reasons why there's considerable interest in these topics might be because t
 
 In this article I am going to propose a project setup which puts an emphasis on building modular apps from *packages*. Since all those packages will be developed in a common source code repository the approach is sometimes referred to as a *monorepo* approach.
 
-We'll be copying parts from a [sample project](https://github.com/about-code/ng-mono-sample). I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/master.zip) or clone the project locally with `git clone https://github.com/about-code/ng-mono-sample.git`. After downloading rename the folder to something different, e.g. `ng-mono-sample-files`, because we'll be recreating the same folder in the course of this tutorial.
+Throughout this article we are going to copy parts of a [sample project](https://github.com/about-code/ng-mono-sample). Therefore I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/master.zip) or clone the project locally with `git clone https://github.com/about-code/ng-mono-sample.git`. After downloading rename the folder to something different, e.g. `ng-mono-sample-files`, because we'll be recreating the same folder in the course of this tutorial.
 
 **Table of Contents**<a name="toc"></a>
 
