@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Large Scale Angular from Scratch Part 1"
-date:   2018-04-01 12:00:00 +0200
+date:   2018-04-28 14:28:00 +0200
 categories: web-development javascript angular
 ---
 
