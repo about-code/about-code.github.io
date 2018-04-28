@@ -4,6 +4,7 @@
 #   disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 menu:
+- {name: 'Home', path: '.', url: ''}
 - {name: 'Articles', path: 'menu', url: 'writing.html'}
 - {name: 'About', path: 'menu', url: 'about.html'}
 - {name: 'Contact', path: 'menu', url: 'contact.html'}

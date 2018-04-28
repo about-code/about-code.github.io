@@ -82,14 +82,19 @@ hr {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 615px;
+  width: 768px;
 }
 
 /*48em*/
 
-@media (max-width: 768px) {
+@media (max-width: 796px) {
   .container {
     width: 90vw;
+  }
+
+  .logo {
+    display: block;
+    margin: 0px auto;
   }
 }
 
@@ -100,7 +105,7 @@ hr {
 .masthead {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   font-family: "Quattrocento Sans", sans-serif;
 }
 
@@ -108,7 +113,7 @@ hr {
   color:black;
 }
 
-.masthead-title a {
+.masthead-title a, .menu a {
   font-size: 2rem;
   text-decoration: none;
   color: #505050;
@@ -116,6 +121,21 @@ hr {
 
 .masthead-subtitle {
   color: #999;
+}
+
+@media(max-width: 796px) {
+  .masthead-subtitle {
+    display:block;
+    color: #999;
+  }
+}
+
+.logo {
+  float: left;
+  padding-top: 0.9rem;
+  margin: 0 15px 0 0;
+  width: 40px;
+  height:40px;
 }
 
 /*
@@ -139,6 +159,7 @@ hr {
 */
 
 .post-container {
+  display:block;
   margin-bottom: 4rem;
 }
 
@@ -232,12 +253,11 @@ hr {
 */
 
 .menu {
+  border-top: 1px solid #AFAFAF;
   padding-top: 0.5rem;
+  text-align: center;
   display: block;
-}
-
-.menu-content {
-  float: left;
+  clear:both;
 }
 
 .menu-content a {
