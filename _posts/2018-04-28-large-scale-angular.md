@@ -12,7 +12,7 @@ The <a href="https://www.ng-conf.org/survey-results-angular-community/" target="
 
 In this article I'll try to pick up on this. I am going to propose a project setup which puts an emphasis on architectural aspects such as *modularity*, *maintainability*, *structural scalability* and *separation of concerns*.  Angular CLI v6 is about to come with [library support](https://github.com/angular/angular-cli/issues/6510). I am confident this will make it easier to set up angular applications with similar properties. Nevertheless, even with library support the CLI may not provide the flexibility sometimes required in enterprise settings. Luckily, the CLI developers provide us with [`@ngtools/webpack`](https://npmjs.com/package/@ngtools/webpack). This is a great tool which allows us to compile an Angular application within a custom webpack build.
 
-Throughout this article we are going to copy parts of a [sample project](https://github.com/about-code/ng-mono-sample). Therefore I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/master.zip) or clone the project locally with `git clone https://github.com/about-code/ng-mono-sample.git`. After downloading rename the folder to something different, e.g. `ng-mono-sample-files`, because we'll be recreating the same folder in the course of this tutorial.
+Throughout this article we are going to copy parts of a [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0). Therefore I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/v1.0.0.zip). After downloading rename the folder to something different, e.g. `ng-mono-sample-files`, because we'll be recreating the same folder in the course of this tutorial.
 
 **Table of Contents**<a name="toc"></a>
 
@@ -112,7 +112,7 @@ Open `package.json` and add `"private": true,` as the first line following the o
 
 Finding out what dependencies and tools it takes to build a production-ready Angular app from scratch became a bit of a research task. IMHO Angular docs were better at that in the past but have started to refer to *angular-cli* or the [angular quickstart](https://github.com/angular/quickstart) seed project. The seed project is a little outdated. So when building an angular project from scratch its probably better to generate a temporary project with the cli and look at the `dependencies` section of the generated `package.json`.
 
-For the sake of this tutorial copy the `dependencies` and `devDependencies` section from our [sample project](https://github.com/about-code/ng-mono-sample) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_the_app) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
+For the sake of this tutorial copy the `dependencies` and `devDependencies` section from our [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_the_app) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
 
 - **[TypeScript](https://www.typescriptlang.org)** for writing and transpiling typed JavaScript
 - **[Webpack](https://www.webpack.js.org)** for building and bundling our app
@@ -183,7 +183,7 @@ When you installed the dependencies you also got TypeScript. Within `${PROJECT_H
 node ./node_modules/typescript/bin/tsc --init
 ```
 
-to generate an initial `tsconfig.json`. Head over to our [sample project](https://github.com/about-code/ng-mono-sample) again and copy the contents of its `tsconfig.json` into your own. Unfortunately it would be too much to explain all the different TS options. They are well documented in the [TypeScript GitHub Wiki](https://github.com/microsoft/typescript/wiki).  These are the important bits and pieces in our setup:
+to generate an initial `tsconfig.json`. Head over to our [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) again and copy the contents of its `tsconfig.json` into your own. Unfortunately it would be too much to explain all the different TS options. They are well documented in the [TypeScript GitHub Wiki](https://github.com/microsoft/typescript/wiki).  These are the important bits and pieces in our setup:
 
 #### `target`
 With `"target": "es5"` we tell TypeScript to transpile to ECMAScript5 **syntax**.
@@ -211,7 +211,7 @@ By default the TypeScript module resolution will look for package imports like `
 
 #### `angularCompilerOptions`
 
-The Angular compiler is a wrapper around TypeScript which is capable of statically analysing and transforming Angular specific artifacts and code concepts, like decorator meta data or HTML templates. A `tsconfig.json` for an Angular application project needs additional `angularCompilerOptions` for instructing the Angular Ahead-of-Time compiler. If you copied the config from our [sample project](https://github.com/about-code/ng-mono-sample) it should look like this:
+The Angular compiler is a wrapper around TypeScript which is capable of statically analysing and transforming Angular specific artifacts and code concepts, like decorator meta data or HTML templates. A `tsconfig.json` for an Angular application project needs additional `angularCompilerOptions` for instructing the Angular Ahead-of-Time compiler. If you copied the config from our [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) it should look like this:
 
 ```
 "angularCompilerOptions": {
@@ -304,7 +304,7 @@ git commit -m "Adding an empty app package"
 
 ### Implementing the Core Application Package
 
-Replace the `ng-mono-sample-app` package within our project with the one from the [sample project](https://github.com/about-code/ng-mono-sample). We'll explain the most interesting files below:
+Replace the `ng-mono-sample-app` package within our project with the one from the [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0). We'll explain the most interesting files below:
 
 ```
 cd packages/@foo/ng-mono-sample-app
@@ -374,7 +374,7 @@ git commit -m "Implementing the app package and bootstrap sequence"
 
 ### The Application Shell
 
-The files for our application shell will be created in `${PROJECT_HOME}/src/` folder. Copy the `src` folder from the [sample project](https://github.com/about-code/ng-mono-sample).
+The files for our application shell will be created in `${PROJECT_HOME}/src/` folder. Copy the `src` folder from the [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0).
 
 
 
@@ -748,7 +748,7 @@ You might remember that we configured the TypeScript compiler's module resolutio
 
 With those TS and webpack path settings we are able to import things *by package name* without having to link the packages into `node_modules` prior to building our app! It enables us to build an app from packages without requiring us to have a library build for each package unless absolutely needed. A library build is only needed if we plan to share and publish a package or we plan to move it from the monorepo into a separate repo. Until then with our project setup we are prepared for that but we are *not required* to think about this upfront if our main goal is to build an app. Writing a package-oriented app is limited to creating package folders and adhering to some package conventions.
 
-> Extending the project with a build process for the packages might become a separate post. For the moment you can have a look at how it is solved in the [sample project](https://github.com/about-code/ng-mono-sample).
+> Extending the project with a build process for the packages might become a separate post. For the moment you can have a look at how it is solved in the [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0).
 
 ### Running the Build and Serving the App
 
@@ -782,7 +782,7 @@ git commit -m "Adding webpack build and bundling config"
 
 ## If you're in trouble<a name="troubleshooting"></a>
 
-If you couldn't make the setup work, don't panic. Then go on with the [sample](https://github.com/about-code/ng-mono-sample) and tailor it manually.
+If you couldn't make the setup work, don't panic. Then go on with the [sample](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) and tailor it manually.
 
 ## Customizing the Sample Project<a name="customizing_sample"></a>
 
