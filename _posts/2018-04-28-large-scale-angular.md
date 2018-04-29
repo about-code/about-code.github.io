@@ -12,7 +12,7 @@ The <a href="https://www.ng-conf.org/survey-results-angular-community/" target="
 
 In this article I'll try to pick up on this. I am going to propose a project setup which puts an emphasis on architectural aspects such as *modularity*, *maintainability*, *structural scalability* and *separation of concerns*.  Angular CLI v6 is about to come with [library support](https://github.com/angular/angular-cli/issues/6510). I am confident this will make it easier to set up angular applications with similar properties. Nevertheless, even with library support the CLI may not provide the flexibility sometimes required in enterprise settings. Luckily, the CLI developers provide us with [`@ngtools/webpack`](https://npmjs.com/package/@ngtools/webpack). This is a great tool which allows us to compile an Angular application within a custom webpack build.
 
-Throughout this article we are going to copy parts of a [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0). Therefore I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/v1.0.0.zip). After downloading rename the folder to something different, e.g. `ng-mono-sample-files`, because we'll be recreating the same folder in the course of this tutorial.
+Throughout this article we are going to copy parts of a [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0). Therefore I recommend to [download the ZIP](https://github.com/about-code/ng-mono-sample/archive/v1.0.0.zip).
 
 **Table of Contents**<a name="toc"></a>
 
@@ -377,7 +377,6 @@ git commit -m "Implementing the app package and bootstrap sequence"
 The files for our application shell will be created in `${PROJECT_HOME}/src/` folder. Copy the `src` folder from the [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0).
 
 
-
 > A shell is required when developing and bundling an Angular *application project*. In a *library project* developers *might* choose to have an application which acts as a test-bed for the library.
 
 After this step you should have a file layout like the following:
@@ -460,7 +459,7 @@ cd ng-mono-sample-app-theme-default
 npm init
    // name: @foo/ng-mono-sample-app-theme-default
 touch index.scss .gitignore LICENSE.txt README.md variables.scss
-mkdir fonts icons images packages
+mkdir fonts icons images
 ```
 
 After this step you should have a structure
@@ -472,8 +471,10 @@ ${PROJECT_HOME}
   |   |- @foo/
   |     |- ng-mono-sample-app/
   |     |- ng-mono-sample-app-theme-default/   // new
+  |       |- fonts/
+  |       |- icons/
+  |       |- images/
   |       |- .gitignore
-  |       |- .npmignore
   |       |- index.scss
   |       |- LICENSE.txt
   |       |- package.json
@@ -492,7 +493,7 @@ git status  // Optional: see what's being committed
 git commit -m "Adding a theme package"
 ```
 
-We won't go any further into theming or structuring the theme package. However if you add assets such as fonts or icons then we found it useful to add package sub-folders `fonts`, `icons`, `images` etc., and define a sass variable for each path for use in the theme's `.scss` files.
+We won't go any further into theming or structuring the theme package at the moment. However if you add assets such as fonts or icons then we found it useful to add package sub-folders `fonts`, `icons`, `images` etc., and define a sass variable for each path for use in the theme's `.scss` files.
 
 ## Building and Bundling the App<a name="building_the_app"></a>
 
