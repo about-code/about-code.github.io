@@ -321,7 +321,7 @@ platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
 This is where our application package registers its *AppModule* with Angular and enters the Angular framework lifecycle.
 The snippet is pretty standard Angular and you should find a similar one in the [angular.io](https://angular.io) docs.
 
-> **Note:** `You might wonder where {NgModuleName}.ngfactory.ts` is in the source tree. `*.ngfactory*` files won't ever exist there but are generated dynamically during *Ahead-of-Time Compilation (AoT)* from the `{NgModuleName}.ts` counter-part in the source tree. You can safely ignore editor complaints about the missing file.
+> **Note:** You might wonder where `{NgModuleName}.ngfactory.ts` is in the source tree. `*.ngfactory*` files won't ever exist there but are generated dynamically during *Ahead-of-Time Compilation (AoT)* from the `{NgModuleName}.ts` counter-part in the source tree. You can safely ignore editor complaints about the missing file.
 
 *src/AppModule.ts*
 
