@@ -215,7 +215,7 @@ The Angular compiler is a wrapper around TypeScript which is capable of statical
 
 ```
 "angularCompilerOptions": {
-  "entryModule": "./packages/@foo/ng-mono-sample/src/AppModule#AppModule",
+  "entryModule": "./packages/@foo/ng-mono-sample-app/src/AppModule#AppModule",
   "skipMetadataEmit": true
 }
 ```
