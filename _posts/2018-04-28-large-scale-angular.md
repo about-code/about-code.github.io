@@ -110,9 +110,7 @@ Open `package.json` and add `"private": true,` as the first line following the o
 
 ## Installing Project Dependencies and Defining the Toolchain<a name="install_deps"></a>
 
-Finding out what dependencies and tools it takes to build a production-ready Angular app from scratch became a bit of a research task. IMHO Angular docs were better at that in the past but have started to refer to *angular-cli* or the [angular quickstart](https://github.com/angular/quickstart) seed project. The seed project is a little outdated. So when building an angular project from scratch its probably better to generate a temporary project with the cli and look at the `dependencies` section of the generated `package.json`.
-
-For the sake of this tutorial copy the `dependencies` and `devDependencies` section from our [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_the_app) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
+For the sake of the tutorial copy the `dependencies` and `devDependencies` section from the [sample project](https://github.com/about-code/ng-mono-sample/tree/v1.0.0) and type `npm install` within your `${PROJECT_HOME}`. If you are overwhelmed by the amount of dev dependencies have a closer look at them. There are only a few core tool dependencies while all the other dependencies are helper plug-ins for these tools (e.g. webpack loader plugins) or *typings* to provide optional type information when using JavaScript libraries with TypeScript. In chapter [Building and Bundling the App](#building_the_app) we will see which requirements they serve. For the moment you should just see that the actual toolchain is much simpler and consists of these tools and purposes:
 
 - **[TypeScript](https://www.typescriptlang.org)** for writing and transpiling typed JavaScript
 - **[Webpack](https://www.webpack.js.org)** for building and bundling our app
@@ -128,6 +126,8 @@ Our actual application dependencies are common to every Angular project:
 - **[RxJS](https://github.com/reactivex/rxjs)** (Reactive Extensions)
 - **[Zone.js](https://github.com/angular/zone.js)**
 - **[Core-JS](https://github.com/zloirock/core-js)** (Polyfills)
+
+You'll find most of them also listed in the Setup & Deployment Guide on [angular.io](https://angular.io/guide/npm-packages).
 
 > **Npm fundamentals:** Additional development tools should be added/installed with `npm i -D <package-name>`. Packages listet in `dependencies` contribute source code which is going to be bundled and deployed with our application. These deps should be added with `npm i <package-name>`.
 
@@ -238,7 +238,7 @@ ${PROJECT_HOME}
   |- tsconfig.json     // New
 ```
 
-Commit our changes:
+Commit your changes:
 
 ```
 git add -A
