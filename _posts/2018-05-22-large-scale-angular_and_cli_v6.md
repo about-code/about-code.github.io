@@ -8,7 +8,7 @@ related: 2018-04-28-large-scale-angular.md
 tags: large-scale, angular
 ---
 
-In [Large Scale Angular from Scratch Part 1](./large-scale-angular.html) [[1][1]] we showed how to set up and build an Angular project from scratch without using the CLI. The article series is intentionally not using the CLI for educational purposes. We do not aim for dissuading from using the CLI. Our article is purely intended to teach alternative options if the CLI can't be used for whatever reason.
+In [Large Scale Angular from Scratch Part 1](./large-scale-angular.html) [[2][2]] we showed how to set up and build an Angular project from scratch without using the CLI. The article series is intentionally not using the CLI for educational purposes. We do not aim for dissuading from using the CLI. Our article is purely intended to teach alternative options if the CLI can't be used for whatever reason.
 
 Since the first article Angular-CLI v6 has been released as expected and eventually incorporates *library support*. This means it's getting a lot easier to build package-oriented Angular apps with the CLI. But there remain some differences, of course.
 
