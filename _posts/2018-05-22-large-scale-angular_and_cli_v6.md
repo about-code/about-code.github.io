@@ -82,7 +82,7 @@ Constructing an app from packages as a matter of good design provides a value on
 
 ## Summary
 
-In this post we tried to outline why we think the risks mentioned in the CLI wiki [[1][1]] regarding the way our project sample is being configured and built in [[2][2]] is managable. We tried to argue for comparing the risks mentioned in [[1][1]] to the project priorities. Further we think testing an app with pre-built packages only from time to time provides a similar level of safety than doing so constantly for every change. Nevertheless we cannot yet present a sample project with a package-release workflow supporting those tests.
+In this post we tried to outline why we think the risks mentioned in the CLI wiki [[1][1]] regarding the way our project sample is being configured and built in [[2][2]] is managable. We tried to argue for comparing the risks mentioned in [[1][1]] to the project priorities. Further we think testing an app with pre-built packages only from time to time provides a similar level of safety than doing so constantly for every change.
 
 ## References
 
