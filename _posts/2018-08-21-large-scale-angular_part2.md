@@ -321,7 +321,8 @@ Run the tests with `npm run test-e2e`.
 ## Final words
 
 In this part we have shown a testing toolchain and how to configure it.
-The article basically summarizes what's been a standard toolchain before there
+The article basically summarizes what's been a typical toolchain before there
 was an Angular-CLI. The CLI still uses a pretty similar toolchain internally
-yet tries to simplify overall configuration at the cost of flexibility.
-In the third part we'll focus on advanced workflows.
+yet tries to simplify overall configuration at the cost of some flexibility
+in terms of configuring the tools. In the third part we are going to focus on
+advanced workflows in a monorepo project.
