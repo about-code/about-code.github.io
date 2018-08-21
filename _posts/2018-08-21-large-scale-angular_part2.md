@@ -7,6 +7,10 @@ image: 2018-04-28-large-scale-angular/article.png
 tags: large-scale, angular
 ---
 
+In the second part of *Large Scale Angular from Scratch* we show you how to set
+up unit tests and end-to-end tests using *Karma*, *Webpack* and *Protractor*
+based on the monorepo project structure introduced in part 1.
+
 **Table of Contents**<a name="toc"></a>
 
 [Part 1](./large-scale-angular.html)
